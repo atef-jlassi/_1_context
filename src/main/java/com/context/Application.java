@@ -15,12 +15,12 @@ public class Application {
 
     try (var context = new AnnotationConfigApplicationContext(ProjectConfig.class)) {
       System.out.println("-- THE FIRST WAY --");
-      // Get bean by type: you only specify the type of the instance
+      // GET BEAN BY TYPE: you only specify the type of the instance
       MyBean b1 = context.getBean(MyBean.class);
       MyBean b2 = context.getBean(MyBean.class);
       MyBean b3 = context.getBean(MyBean.class);
 
-    /** Get bean by name: you specify the name of the requested bean
+    /** GET BEAN BY NAME: you specify the name of the requested bean
      * by default the name of the bean is the name of the method, Eg = 'myBean1'
      * otherwise you can specify the name of the bean within @Bean("myNewBeanName")
      */
