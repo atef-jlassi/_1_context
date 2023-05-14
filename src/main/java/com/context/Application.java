@@ -15,6 +15,9 @@ public class Application {
 
     try (var context = new AnnotationConfigApplicationContext(ProjectConfig.class)) {
       System.out.println("-- THE FIRST WAY --");
+      /**
+       * first way to put/place bean in the context
+       */
       // GET BEAN BY TYPE: you only specify the type of the instance
       MyBean b1 = context.getBean(MyBean.class);
       MyBean b2 = context.getBean(MyBean.class);
